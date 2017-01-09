@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOD-ly-8ql">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Resume-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Resume" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,165 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scott McIntire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AUR-Uv-OUz">
+                                <rect key="frame" x="199" y="40" width="202" height="40.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="35"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="selfie.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j8P-ad-N1e">
+                                <rect key="frame" x="180" y="100.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MUM-dV-nNt"/>
+                                    <constraint firstAttribute="height" constant="240" id="WUH-Dl-sSr"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDV-MK-9PA">
+                                <rect key="frame" x="277" y="425.5" width="47" height="30"/>
+                                <state key="normal" title="School"/>
+                                <connections>
+                                    <segue destination="H2e-4C-f7x" kind="show" id="cIW-y8-lnL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTC-T2-dAD">
+                                <rect key="frame" x="267" y="475.5" width="67" height="30"/>
+                                <state key="normal" title="Call Scott"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXL-7Z-3iz">
+                                <rect key="frame" x="261" y="525.5" width="78" height="30"/>
+                                <state key="normal" title="Email Scott"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01W-PO-BUJ">
+                                <rect key="frame" x="262" y="375.5" width="77" height="30"/>
+                                <state key="normal" title="Experience"/>
+                                <connections>
+                                    <segue destination="RIO-pd-57p" kind="show" id="9ed-sG-BB3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="01W-PO-BUJ" firstAttribute="top" secondItem="j8P-ad-N1e" secondAttribute="bottom" constant="35" id="2pC-c0-BkV"/>
+                            <constraint firstItem="01W-PO-BUJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6OR-EN-crs"/>
+                            <constraint firstItem="j8P-ad-N1e" firstAttribute="top" secondItem="AUR-Uv-OUz" secondAttribute="bottom" constant="20" id="F7Y-ZI-9Uj"/>
+                            <constraint firstItem="gTC-T2-dAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hbw-sJ-FhH"/>
+                            <constraint firstItem="FXL-7Z-3iz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KhU-Nr-xCv"/>
+                            <constraint firstItem="mDV-MK-9PA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCH-lf-rD4"/>
+                            <constraint firstItem="AUR-Uv-OUz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cTp-cw-Zho"/>
+                            <constraint firstItem="FXL-7Z-3iz" firstAttribute="top" secondItem="gTC-T2-dAD" secondAttribute="bottom" constant="20" id="hKn-ft-4qx"/>
+                            <constraint firstItem="AUR-Uv-OUz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="idb-QA-jIJ"/>
+                            <constraint firstItem="gTC-T2-dAD" firstAttribute="top" secondItem="mDV-MK-9PA" secondAttribute="bottom" constant="20" id="ioV-F9-mc7"/>
+                            <constraint firstItem="j8P-ad-N1e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pcZ-2l-Ebp"/>
+                            <constraint firstItem="mDV-MK-9PA" firstAttribute="top" secondItem="01W-PO-BUJ" secondAttribute="bottom" constant="20" id="yk3-en-yk9"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Resume" id="9jM-SX-9bB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-94" y="599"/>
+        </scene>
+        <!--School-->
+        <scene sceneID="032-sg-vRL">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="H2e-4C-f7x" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o9V-T0-Z0U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zyk-E2-xTl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oGO-Jz-cVb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uNS-t0-woX">
+                                <rect key="frame" x="110" y="257" width="381" height="143"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="C22-UC-9Z7"/>
+                                    <constraint firstAttribute="width" constant="381" id="t3m-4I-pAz"/>
+                                </constraints>
+                                <string key="text">Located in Spokane, WA, Gonzaga University is a medium-sized Jesuit school. Known for it's nationally recognized basketball team and law school, Gonzaga strives to be a prestigious learning center in the Pacific North West. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bulldog.png" translatesAutoresizingMaskIntoConstraints="NO" id="aXk-7N-Fk4">
+                                <rect key="frame" x="195" y="82" width="211" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="O8c-KB-Koy"/>
+                                    <constraint firstAttribute="height" constant="250" id="hoE-Pt-x1J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uNS-t0-woX" firstAttribute="leading" secondItem="oGO-Jz-cVb" secondAttribute="leading" id="5Iw-BU-1Ly"/>
+                            <constraint firstItem="aXk-7N-Fk4" firstAttribute="top" secondItem="oGO-Jz-cVb" secondAttribute="topMargin" id="5qA-3V-rZq"/>
+                            <constraint firstAttribute="trailing" secondItem="uNS-t0-woX" secondAttribute="trailing" id="9WH-Zx-Jg1"/>
+                            <constraint firstItem="Zyk-E2-xTl" firstAttribute="top" secondItem="uNS-t0-woX" secondAttribute="bottom" constant="229" id="CLV-LA-SZ7"/>
+                            <constraint firstItem="aXk-7N-Fk4" firstAttribute="centerX" secondItem="oGO-Jz-cVb" secondAttribute="centerX" id="Cl0-l3-kQq"/>
+                            <constraint firstItem="uNS-t0-woX" firstAttribute="top" secondItem="o9V-T0-Z0U" secondAttribute="bottom" constant="164" id="YkM-4X-x21"/>
+                            <constraint firstItem="aXk-7N-Fk4" firstAttribute="top" secondItem="oGO-Jz-cVb" secondAttribute="topMargin" constant="50" id="s9R-LA-Lw9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="School" id="Xdo-oO-93Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coD-kw-MOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94" y="1342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wsC-3H-dJl">
+            <objects>
+                <navigationController id="BOD-ly-8ql" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYq-I2-uND">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZjF-Ne-KDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KG-84-fow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="599"/>
+        </scene>
+        <!--Experience-->
+        <scene sceneID="t9F-Y2-gMa">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RIO-pd-57p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9M1-QW-inZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="diI-L5-J2q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4PX-l4-uQv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-1G-zZs">
+                                <rect key="frame" x="6" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Web Developer - Acceptto Corp     -Building WordPress websites     -Building Django/Python CMS website     -Mobile app development  Administrative Specialist - ORM     -Data entry     -Stasticial analysis     -Forumlating and sending weekly reports  Hotel Staff - Casa Moabi     -Yard maintenance     -Cooking breakfast for guests     -Cleaning hotel rooms</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JE1-1G-zZs" firstAttribute="top" secondItem="9M1-QW-inZ" secondAttribute="bottom" id="H29-RL-Ttn"/>
+                            <constraint firstAttribute="trailing" secondItem="JE1-1G-zZs" secondAttribute="trailing" id="LiP-p2-Erz"/>
+                            <constraint firstItem="JE1-1G-zZs" firstAttribute="leading" secondItem="4PX-l4-uQv" secondAttribute="leading" id="haY-Wu-8tz"/>
+                            <constraint firstItem="diI-L5-J2q" firstAttribute="top" secondItem="JE1-1G-zZs" secondAttribute="bottom" id="v94-zQ-HZS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Experience" id="q2U-vp-pQg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bg6-ON-jmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="728" y="599"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bulldog.png" width="255" height="197"/>
+        <image name="selfie.jpg" width="400" height="400"/>
+    </resources>
 </document>
